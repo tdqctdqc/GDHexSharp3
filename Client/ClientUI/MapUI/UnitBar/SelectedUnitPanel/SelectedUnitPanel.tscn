@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Client/ClientUI/MapUI/UnitBar/SelectedUnitPanel/SelectedUnitPanel.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/UIUnit/UIUnit.tscn" type="PackedScene" id=2]
+
+[node name="SelectedUnitPanel" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.0
+margin_top = -150.0
+margin_right = 68.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 300 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIUnit" parent="." instance=ExtResource( 2 )]
+margin_left = -60.0
+margin_top = -121.0
+margin_right = 0.0
+margin_bottom = -61.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = 7.0
+margin_right = 50.0
+margin_bottom = 125.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Order" type="Label" parent="VBox"]
+margin_right = 100.0
+margin_bottom = 14.0
+
+[node name="Force" type="Label" parent="VBox"]
+margin_top = 18.0
+margin_right = 100.0
+margin_bottom = 32.0
+
+[node name="Readiness" type="Label" parent="VBox"]
+margin_top = 36.0
+margin_right = 100.0
+margin_bottom = 50.0
+
+[node name="Supply" type="Label" parent="VBox"]
+margin_top = 54.0
+margin_right = 100.0
+margin_bottom = 68.0

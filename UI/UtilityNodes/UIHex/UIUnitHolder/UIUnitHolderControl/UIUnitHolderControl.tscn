@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/UtilityNodes/UIHex/UIUnitHolder/UIUnitHolderControl/UIUnitHolderControl.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=2]
+
+[node name="UIUnitHolderControl" type="Panel"]
+margin_right = 120.0
+margin_bottom = 100.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.0
+margin_top = -34.0
+margin_right = 51.0
+margin_bottom = 34.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Add" type="Button" parent="VBox"]
+margin_right = 102.0
+margin_bottom = 20.0
+focus_mode = 0
+text = "Add Unit"
+script = ExtResource( 2 )
+
+[node name="Remove" type="Button" parent="VBox"]
+margin_top = 24.0
+margin_right = 102.0
+margin_bottom = 44.0
+focus_mode = 0
+text = "Remove Units"
+script = ExtResource( 2 )
+
+[node name="Edit" type="Button" parent="VBox"]
+margin_top = 48.0
+margin_right = 102.0
+margin_bottom = 68.0
+focus_mode = 0
+text = "Edit Units"
+script = ExtResource( 2 )

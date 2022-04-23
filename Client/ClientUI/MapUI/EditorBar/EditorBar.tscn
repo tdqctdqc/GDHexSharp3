@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/FactionPainter/FactionPainterUI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/EditorBar.cs" type="Script" id=2]
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/BrushControls/BrushControls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/EditorUndoControls/EditorUndoControls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/RoadPainter/RoadPainterUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/RiverPainter/RiverPainterUI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/GenericPainter/GenericPainterUI.tscn" type="PackedScene" id=7]
+
+[node name="EditorBar" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -300.0
+margin_right = 75.0
+margin_bottom = 300.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -280.0
+margin_right = 75.0
+margin_bottom = 280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FactionPainterUI" parent="VBox" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 150.0
+margin_bottom = 100.0
+
+[node name="RoadPainterUI" parent="VBox" instance=ExtResource( 5 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 104.0
+margin_right = 150.0
+margin_bottom = 204.0
+
+[node name="RiverPainterUI" parent="VBox" instance=ExtResource( 6 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 208.0
+margin_right = 150.0
+margin_bottom = 308.0
+
+[node name="TerrainPainterUI" parent="VBox" instance=ExtResource( 7 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 312.0
+margin_right = 150.0
+margin_bottom = 412.0
+
+[node name="BrushControls" parent="VBox" instance=ExtResource( 3 )]
+margin_top = 416.0
+margin_right = 150.0
+margin_bottom = 516.0
+
+[node name="EditorUndoControls" parent="VBox" instance=ExtResource( 4 )]
+margin_top = 520.0
+margin_right = 150.0
+margin_bottom = 560.0

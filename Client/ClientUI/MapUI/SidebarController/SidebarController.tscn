@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=1]
+[ext_resource path="res://Client/ClientUI/MapUI/SidebarController/SidebarController.cs" type="Script" id=2]
+
+[node name="SidebarController" type="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -400.0
+margin_right = 400.0
+margin_bottom = 39.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -15.0
+margin_right = 20.0
+margin_bottom = 15.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Editor" type="Button" parent="HBox"]
+margin_right = 49.0
+margin_bottom = 30.0
+focus_mode = 0
+text = "Editor"
+script = ExtResource( 1 )
+
+[node name="Units" type="Button" parent="HBox"]
+margin_left = 53.0
+margin_right = 99.0
+margin_bottom = 30.0
+focus_mode = 0
+text = "Units"
+script = ExtResource( 1 )

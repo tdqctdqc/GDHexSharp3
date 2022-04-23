@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Tynan Dion\\Desktop\\games\\gdHexSharp3\\gdHexSharp3.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Tynan Dion\\Desktop\\games\\gdHexSharp3\\gdHexSharp3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Tynan Dion\\Desktop\\games\\gdHexSharp3\\gdHexSharp3.csproj",
+        "projectName": "gdHexSharp3",
+        "projectPath": "C:\\Users\\Tynan Dion\\Desktop\\games\\gdHexSharp3\\gdHexSharp3.csproj",
+        "packagesPath": "C:\\Users\\Tynan Dion\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tynan Dion\\Desktop\\games\\gdHexSharp3\\.mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Tynan Dion\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "Google.OrTools": {
+              "target": "Package",
+              "version": "[9.1.9490, )"
+            },
+            "KdTree": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.26, )"
+            },
+            "MySqlClient": {
+              "target": "Package",
+              "version": "[5.4.2, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[1.3.11, )"
+            },
+            "OptimizedPriorityQueue": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.114.4, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

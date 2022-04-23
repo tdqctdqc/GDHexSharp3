@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Client/ClientUI/MapUI/SelectedHexPanel/SelectedHexPanel.cs" type="Script" id=1]
+[ext_resource path="res://Client/ClientUI/MapUI/SelectedHexPanel/HexPanel.tscn" type="PackedScene" id=2]
+
+[node name="SelectedHexPanel" type="VBoxContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -88.5
+margin_top = -118.5
+margin_right = 61.5
+margin_bottom = 485.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MouseOver" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 150.0
+margin_bottom = 300.0
+
+[node name="Selected" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 304.0
+margin_right = 150.0
+margin_bottom = 604.0

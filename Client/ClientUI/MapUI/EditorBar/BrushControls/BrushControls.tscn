@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Client/ClientUI/MapUI/EditorBar/BrushControls/BrushControls.cs" type="Script" id=1]
+
+[node name="BrushControls" type="Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 150, 100 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -37.5
+margin_right = 60.0
+margin_bottom = 37.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BrushSizeLabel" type="Label" parent="VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Brush Size: 1"
+
+[node name="BrushSize" type="HSlider" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 120, 0 )
+focus_mode = 0
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+tick_count = 8
+
+[node name="Fill" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 38.0
+margin_right = 120.0
+margin_bottom = 62.0
+
+[node name="Label" type="Label" parent="VBoxContainer/Fill"]
+margin_top = 5.0
+margin_right = 67.0
+margin_bottom = 19.0
+text = "Fill Mode: "
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/Fill"]
+margin_left = 71.0
+margin_right = 95.0
+margin_bottom = 24.0
+focus_mode = 0
+enabled_focus_mode = 0

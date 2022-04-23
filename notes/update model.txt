@@ -1,0 +1,16 @@
+StateInterface.UpdateModel();
+	State.UpdateModel();
+	Router.BroadcastModelUpdate();
+		Server.BroadcastModelUpdate();
+			ReceiveModelUpdate();
+				Router.ReceiveModelUpdate();
+					parse string
+					CacheManager.ReceiveModelUpdate(parsed);
+						invoke event in dic to call cache<T>
+
+
+
+
+new
+StateInterface.UpdateModel();
+	Cache<T>.UpdateModel();

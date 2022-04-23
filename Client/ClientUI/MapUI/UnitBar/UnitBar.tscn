@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Client/ClientUI/MapUI/UnitBar/UnitBar.cs" type="Script" id=1]
+[ext_resource path="res://Client/ClientUI/MapUI/UnitBar/SelectedUnitPanel/SelectedUnitPanel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Client/ClientUI/MapUI/UnitBar/SelectedUnitsPanel/SelectedUnitsPanel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=4]
+[ext_resource path="res://UI/UtilityNodes/ListMenu/ListMenuButton.cs" type="Script" id=5]
+
+[node name="UnitBar" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -150.0
+margin_right = 75.0
+margin_bottom = 150.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Single" parent="." instance=ExtResource( 2 )]
+margin_left = -75.0
+margin_right = 75.0
+
+[node name="MultiUnit" parent="." instance=ExtResource( 3 )]
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -75.0
+margin_right = 74.0
+margin_bottom = 260.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SetFormation" type="Button" parent="Buttons"]
+margin_right = 149.0
+margin_bottom = 20.0
+focus_mode = 0
+text = "Set Formation"
+script = ExtResource( 4 )
+
+[node name="Bombard" type="Button" parent="Buttons"]
+margin_top = 24.0
+margin_right = 149.0
+margin_bottom = 44.0
+focus_mode = 0
+text = "Bombard"
+script = ExtResource( 4 )
+
+[node name="BuildRoad" type="Button" parent="Buttons"]
+margin_top = 48.0
+margin_right = 149.0
+margin_bottom = 68.0
+focus_mode = 0
+text = "Build Road"
+script = ExtResource( 4 )
+
+[node name="RoadTypes" type="MenuButton" parent="Buttons"]
+margin_top = 72.0
+margin_right = 149.0
+margin_bottom = 92.0
+text = "Select Road Type"
+flat = false
+script = ExtResource( 5 )
+
+[node name="Merge" type="Button" parent="Buttons"]
+margin_top = 96.0
+margin_right = 149.0
+margin_bottom = 116.0
+focus_mode = 0
+text = "Merge"
+script = ExtResource( 4 )
+
+[node name="Split" type="Button" parent="Buttons"]
+margin_top = 120.0
+margin_right = 149.0
+margin_bottom = 140.0
+focus_mode = 0
+text = "Split"
+script = ExtResource( 4 )
+
+[node name="Defend" type="Button" parent="Buttons"]
+margin_top = 144.0
+margin_right = 149.0
+margin_bottom = 164.0
+focus_mode = 0
+text = "Set Defense Line"
+script = ExtResource( 4 )
+
+[node name="Attack" type="Button" parent="Buttons"]
+margin_top = 168.0
+margin_right = 149.0
+margin_bottom = 188.0
+focus_mode = 0
+text = "Set Objective"
+script = ExtResource( 4 )
+
+[node name="BuildUnit" type="Button" parent="Buttons"]
+margin_top = 192.0
+margin_right = 149.0
+margin_bottom = 212.0
+focus_mode = 0
+text = "Build Unit"
+script = ExtResource( 4 )
+
+[node name="BuildFormation" type="Button" parent="Buttons"]
+margin_top = 216.0
+margin_right = 149.0
+margin_bottom = 236.0
+focus_mode = 0
+text = "Build Formation"
+script = ExtResource( 4 )
+
+[node name="ChangePrimaryColor" type="ColorPickerButton" parent="Buttons"]
+margin_top = 240.0
+margin_right = 149.0
+margin_bottom = 260.0
+focus_mode = 0
+text = "Change Color"
+
+[node name="ChangeSecondaryColor" type="ColorPickerButton" parent="Buttons"]
+margin_top = 264.0
+margin_right = 149.0
+margin_bottom = 284.0
+text = "Change Color"

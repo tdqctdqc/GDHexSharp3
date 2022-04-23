@@ -1,0 +1,206 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Client/ClientUI/Windows/BattleSimWindow/BattleSimWindow.cs" type="Script" id=1]
+[ext_resource path="res://Client/ClientUI/Windows/BattleSimWindow/BattleSimHexesDisplay/BattleSimHexes.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/UtilityNodes/ListMenu/ListMenuButton.cs" type="Script" id=3]
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=4]
+[ext_resource path="res://Client/ClientUI/Windows/CreateUnitWindow/CreateUnitWindow.tscn" type="PackedScene" id=5]
+
+[node name="BattleSimWindow" type="WindowDialog"]
+visible = true
+margin_right = 759.0
+margin_bottom = 790.0
+popup_exclusive = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+margin_left = 520.0
+margin_top = 11.0
+margin_right = 720.0
+margin_bottom = 211.0
+rect_min_size = Vector2( 200, 200 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="Scroll"]
+margin_right = 133.0
+margin_bottom = 164.0
+
+[node name="DefTerrain" type="HBoxContainer" parent="Scroll/VBox"]
+margin_right = 133.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="Scroll/VBox/DefTerrain"]
+margin_top = 3.0
+margin_right = 115.0
+margin_bottom = 17.0
+text = "Defender Terrain: "
+
+[node name="MenuButton" type="MenuButton" parent="Scroll/VBox/DefTerrain"]
+margin_left = 119.0
+margin_right = 131.0
+margin_bottom = 20.0
+flat = false
+script = ExtResource( 3 )
+
+[node name="River0" type="HBoxContainer" parent="Scroll/VBox"]
+margin_top = 24.0
+margin_right = 133.0
+margin_bottom = 44.0
+
+[node name="Label" type="Label" parent="Scroll/VBox/River0"]
+margin_top = 3.0
+margin_right = 80.0
+margin_bottom = 17.0
+text = "North River: "
+
+[node name="MenuButton" type="MenuButton" parent="Scroll/VBox/River0"]
+margin_left = 84.0
+margin_right = 96.0
+margin_bottom = 20.0
+flat = false
+script = ExtResource( 3 )
+
+[node name="River1" type="HBoxContainer" parent="Scroll/VBox"]
+margin_top = 48.0
+margin_right = 133.0
+margin_bottom = 68.0
+
+[node name="Label" type="Label" parent="Scroll/VBox/River1"]
+margin_top = 3.0
+margin_right = 110.0
+margin_bottom = 17.0
+text = "North East River: "
+
+[node name="MenuButton" type="MenuButton" parent="Scroll/VBox/River1"]
+margin_left = 114.0
+margin_right = 126.0
+margin_bottom = 20.0
+flat = false
+script = ExtResource( 3 )
+
+[node name="River2" type="HBoxContainer" parent="Scroll/VBox"]
+margin_top = 72.0
+margin_right = 133.0
+margin_bottom = 92.0
+
+[node name="Label" type="Label" parent="Scroll/VBox/River2"]
+margin_top = 3.0
+margin_right = 110.0
+margin_bottom = 17.0
+text = "South East River: "
+
+[node name="MenuButton" type="MenuButton" parent="Scroll/VBox/River2"]
+margin_left = 114.0
+margin_right = 126.0
+margin_bottom = 20.0
+flat = false
+script = ExtResource( 3 )
+
+[node name="River3" type="HBoxContainer" parent="Scroll/VBox"]
+margin_top = 96.0
+margin_right = 133.0
+margin_bottom = 116.0
+
+[node name="Label" type="Label" parent="Scroll/VBox/River3"]
+margin_top = 3.0
+margin_right = 80.0
+margin_bottom = 17.0
+text = "South River: "
+
+[node name="MenuButton" type="MenuButton" parent="Scroll/VBox/River3"]
+margin_left = 84.0
+margin_right = 96.0
+margin_bottom = 20.0
+flat = false
+script = ExtResource( 3 )
+
+[node name="River4" type="HBoxContainer" parent="Scroll/VBox"]
+margin_top = 120.0
+margin_right = 133.0
+margin_bottom = 140.0
+
+[node name="Label" type="Label" parent="Scroll/VBox/River4"]
+margin_top = 3.0
+margin_right = 117.0
+margin_bottom = 17.0
+text = "South West River: "
+
+[node name="MenuButton" type="MenuButton" parent="Scroll/VBox/River4"]
+margin_left = 121.0
+margin_right = 133.0
+margin_bottom = 20.0
+flat = false
+script = ExtResource( 3 )
+
+[node name="River5" type="HBoxContainer" parent="Scroll/VBox"]
+margin_top = 144.0
+margin_right = 133.0
+margin_bottom = 164.0
+
+[node name="Label" type="Label" parent="Scroll/VBox/River5"]
+margin_top = 3.0
+margin_right = 117.0
+margin_bottom = 17.0
+text = "North West River: "
+
+[node name="MenuButton" type="MenuButton" parent="Scroll/VBox/River5"]
+margin_left = 121.0
+margin_right = 133.0
+margin_bottom = 20.0
+flat = false
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 650.0
+margin_bottom = 1008.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BattleSimHexes" parent="VBoxContainer" instance=ExtResource( 2 )]
+
+[node name="Units" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 779.0
+margin_right = 650.0
+margin_bottom = 779.0
+
+[node name="CreateUnitWindow" parent="." instance=ExtResource( 5 )]
+margin_left = 832.839
+margin_top = 258.927
+margin_right = 1071.84
+margin_bottom = 401.927
+
+[node name="Controls" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -204.0
+margin_top = -216.0
+margin_right = -19.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoRound" type="Button" parent="Controls"]
+margin_right = 200.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 50 )
+focus_mode = 0
+text = "Do Round"
+script = ExtResource( 4 )
+
+[node name="DoTurn" type="Button" parent="Controls"]
+margin_top = 54.0
+margin_right = 200.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 200, 50 )
+focus_mode = 0
+text = "Do Turn"
+script = ExtResource( 4 )

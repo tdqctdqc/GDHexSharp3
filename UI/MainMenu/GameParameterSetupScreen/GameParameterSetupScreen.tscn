@@ -1,0 +1,297 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/MainMenu/GameParameterSetupScreen/GameParameterSetupScreen.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=2]
+[ext_resource path="res://UI/UtilityNodes/NumEntry/NumEntry.cs" type="Script" id=3]
+
+[node name="GameParameterSetupScreen" type="WindowDialog"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -189.0
+margin_top = -208.0
+margin_right = 68.0
+margin_bottom = 204.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -111.0
+margin_top = -164.0
+margin_right = 111.0
+margin_bottom = 164.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Seed" type="HBoxContainer" parent="VBox"]
+margin_right = 222.0
+margin_bottom = 24.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/Seed"]
+margin_top = 5.0
+margin_right = 39.0
+margin_bottom = 19.0
+text = "Seed: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/Seed"]
+margin_left = 43.0
+margin_right = 117.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+max_value = 10000.0
+
+[node name="Width" type="HBoxContainer" parent="VBox"]
+margin_top = 28.0
+margin_right = 222.0
+margin_bottom = 52.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/Width"]
+margin_top = 5.0
+margin_right = 46.0
+margin_bottom = 19.0
+text = "Width: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/Width"]
+margin_left = 50.0
+margin_right = 124.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+max_value = 1000.0
+value = 100.0
+
+[node name="Height" type="HBoxContainer" parent="VBox"]
+margin_top = 56.0
+margin_right = 222.0
+margin_bottom = 80.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/Height"]
+margin_top = 5.0
+margin_right = 50.0
+margin_bottom = 19.0
+text = "Height: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/Height"]
+margin_left = 54.0
+margin_right = 128.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+max_value = 1000.0
+value = 100.0
+
+[node name="NumContinents" type="HBoxContainer" parent="VBox"]
+margin_top = 84.0
+margin_right = 222.0
+margin_bottom = 108.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/NumContinents"]
+margin_top = 5.0
+margin_right = 108.0
+margin_bottom = 19.0
+text = "Num Continents:"
+
+[node name="SpinBox" type="SpinBox" parent="VBox/NumContinents"]
+margin_left = 112.0
+margin_right = 186.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+min_value = 1.0
+max_value = 15.0
+value = 10.0
+
+[node name="AltitudeOctaves" type="HBoxContainer" parent="VBox"]
+margin_top = 112.0
+margin_right = 222.0
+margin_bottom = 136.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/AltitudeOctaves"]
+margin_top = 5.0
+margin_right = 115.0
+margin_bottom = 19.0
+text = "Altitude Octaves: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/AltitudeOctaves"]
+margin_left = 119.0
+margin_right = 193.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+min_value = 1.0
+max_value = 10.0
+value = 4.0
+
+[node name="AltitudePeriod" type="HBoxContainer" parent="VBox"]
+margin_top = 140.0
+margin_right = 222.0
+margin_bottom = 164.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/AltitudePeriod"]
+margin_top = 5.0
+margin_right = 104.0
+margin_bottom = 19.0
+text = "Altitude Period: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/AltitudePeriod"]
+margin_left = 108.0
+margin_right = 182.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+min_value = 1.0
+value = 10.0
+
+[node name="AltitudePersistence" type="HBoxContainer" parent="VBox"]
+margin_top = 168.0
+margin_right = 222.0
+margin_bottom = 192.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/AltitudePersistence"]
+margin_top = 5.0
+margin_right = 138.0
+margin_bottom = 19.0
+text = "Altitude Persistence: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/AltitudePersistence"]
+margin_left = 142.0
+margin_right = 216.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="MoistureOctaves" type="HBoxContainer" parent="VBox"]
+margin_top = 196.0
+margin_right = 222.0
+margin_bottom = 220.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/MoistureOctaves"]
+margin_top = 5.0
+margin_right = 121.0
+margin_bottom = 19.0
+text = "Moisture Octaves: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/MoistureOctaves"]
+margin_left = 125.0
+margin_right = 199.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+min_value = 1.0
+max_value = 10.0
+value = 4.0
+
+[node name="MoisturePeriod" type="HBoxContainer" parent="VBox"]
+margin_top = 224.0
+margin_right = 222.0
+margin_bottom = 248.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/MoisturePeriod"]
+margin_top = 5.0
+margin_right = 110.0
+margin_bottom = 19.0
+text = "Moisture Period: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/MoisturePeriod"]
+margin_left = 114.0
+margin_right = 188.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+min_value = 1.0
+value = 10.0
+
+[node name="MoisturePersistence" type="HBoxContainer" parent="VBox"]
+margin_top = 252.0
+margin_right = 222.0
+margin_bottom = 276.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/MoisturePersistence"]
+margin_top = 5.0
+margin_right = 144.0
+margin_bottom = 19.0
+text = "Moisture Persistence: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/MoisturePersistence"]
+margin_left = 148.0
+margin_right = 222.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="PercentLand" type="HBoxContainer" parent="VBox"]
+margin_top = 280.0
+margin_right = 222.0
+margin_bottom = 304.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBox/PercentLand"]
+margin_top = 5.0
+margin_right = 91.0
+margin_bottom = 19.0
+text = "Percent Land: "
+
+[node name="SpinBox" type="SpinBox" parent="VBox/PercentLand"]
+margin_left = 95.0
+margin_right = 169.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 50, 0 )
+min_value = 25.0
+value = 50.0
+
+[node name="Confirm" type="Button" parent="VBox"]
+margin_top = 308.0
+margin_right = 222.0
+margin_bottom = 328.0
+focus_mode = 0
+text = "Confirm"
+script = ExtResource( 2 )

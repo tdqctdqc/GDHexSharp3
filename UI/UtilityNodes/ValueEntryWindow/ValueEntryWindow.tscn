@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/UtilityNodes/ValueEntryWindow/ValueEntryWindow.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=2]
+
+[node name="ValueEntryWindow" type="WindowDialog"]
+margin_right = 298.0
+margin_bottom = 355.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -126.0
+margin_top = -20.0
+margin_right = 126.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confirm" type="Button" parent="VBox"]
+margin_right = 252.0
+margin_bottom = 20.0
+focus_mode = 0
+text = "Confirm"
+script = ExtResource( 2 )

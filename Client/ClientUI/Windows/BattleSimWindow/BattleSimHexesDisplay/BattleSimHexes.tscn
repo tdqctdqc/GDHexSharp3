@@ -1,0 +1,198 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Client/ClientUI/Windows/BattleSimWindow/BattleSimHexesDisplay/BattleSimHexes.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/UIHex/UIHex.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/UtilityNodes/UIHex/UIUnitHolder/UIUnitHolderControl/UIUnitHolderControl.tscn" type="PackedScene" id=3]
+
+[node name="BattleSimHexes" type="Control"]
+margin_right = 650.0
+margin_bottom = 775.0
+rect_min_size = Vector2( 650, 775 )
+mouse_filter = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hexes" type="Control" parent="."]
+margin_left = 20.0
+margin_top = 105.0
+margin_right = 285.0
+margin_bottom = 391.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Def" parent="Hexes" instance=ExtResource( 2 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -48.2117
+margin_top = -31.4719
+margin_right = 51.7883
+margin_bottom = 68.5281
+
+[node name="North" parent="Hexes" instance=ExtResource( 2 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -48.2117
+margin_top = -121.472
+margin_right = 51.7883
+margin_bottom = -21.4719
+
+[node name="South" parent="Hexes" instance=ExtResource( 2 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -48.2117
+margin_top = 58.5281
+margin_right = 51.7883
+margin_bottom = 158.528
+
+[node name="SouthEast" parent="Hexes" instance=ExtResource( 2 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 31.7883
+margin_top = 13.5281
+margin_right = 131.788
+margin_bottom = 113.528
+
+[node name="NorthEast" parent="Hexes" instance=ExtResource( 2 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 31.7883
+margin_top = -76.4719
+margin_right = 131.788
+margin_bottom = 23.5281
+
+[node name="NorthWest" parent="Hexes" instance=ExtResource( 2 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -128.212
+margin_top = -76.4719
+margin_right = -28.2117
+margin_bottom = 23.5281
+
+[node name="SouthWest" parent="Hexes" instance=ExtResource( 2 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -128.212
+margin_top = 13.5281
+margin_right = -28.2117
+margin_bottom = 113.528
+
+[node name="Controllers" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" parent="Controllers" instance=ExtResource( 3 )]
+margin_left = 230.0
+margin_top = 58.0
+margin_right = 350.0
+margin_bottom = 158.0
+
+[node name="Label" type="Label" parent="Controllers/0"]
+margin_top = -50.0
+margin_right = 121.0
+margin_bottom = -4.0
+text = "Damage Dealt:
+Damage Received: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" parent="Controllers" instance=ExtResource( 3 )]
+margin_left = 390.0
+margin_top = 148.0
+margin_right = 510.0
+margin_bottom = 248.0
+
+[node name="Label" type="Label" parent="Controllers/1"]
+margin_top = -50.0
+margin_right = 121.0
+margin_bottom = -4.0
+text = "Damage Dealt:
+Damage Received: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" parent="Controllers" instance=ExtResource( 3 )]
+margin_left = 390.0
+margin_top = 612.0
+margin_right = 510.0
+margin_bottom = 712.0
+
+[node name="Label" type="Label" parent="Controllers/2"]
+margin_top = 102.0
+margin_right = 122.0
+margin_bottom = 148.0
+text = "Damage Dealt:
+Damage Received: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" parent="Controllers" instance=ExtResource( 3 )]
+margin_left = 230.0
+margin_top = 702.0
+margin_right = 350.0
+margin_bottom = 802.0
+
+[node name="Label" type="Label" parent="Controllers/3"]
+margin_top = 102.0
+margin_right = 122.0
+margin_bottom = 148.0
+text = "Damage Dealt:
+Damage Received: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" parent="Controllers" instance=ExtResource( 3 )]
+margin_left = 70.0
+margin_top = 612.0
+margin_right = 190.0
+margin_bottom = 712.0
+
+[node name="Label" type="Label" parent="Controllers/4"]
+margin_top = 102.0
+margin_right = 122.0
+margin_bottom = 148.0
+text = "Damage Dealt:
+Damage Received: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" parent="Controllers" instance=ExtResource( 3 )]
+margin_left = 70.0
+margin_top = 148.0
+margin_right = 190.0
+margin_bottom = 248.0
+
+[node name="Label" type="Label" parent="Controllers/5"]
+margin_top = -50.0
+margin_right = 121.0
+margin_bottom = -4.0
+text = "Damage Dealt:
+Damage Received: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" parent="Controllers" instance=ExtResource( 3 )]
+margin_left = 554.0
+margin_top = 380.0
+margin_right = 674.0
+margin_bottom = 480.0
+
+[node name="Label" type="Label" parent="Controllers/6"]
+margin_top = -50.0
+margin_right = 121.0
+margin_bottom = -4.0
+text = "Damage Dealt:
+Damage Received: "
+__meta__ = {
+"_edit_use_anchors_": false
+}

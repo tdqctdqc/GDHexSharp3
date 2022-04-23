@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Client/ClientUI/MapUI/MapColorButtons/MapOptionButtons.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=2]
+
+[node name="MapColorButtons" type="VBoxContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -58.0
+margin_right = 75.0
+margin_bottom = 58.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Faction" type="Button" parent="."]
+margin_right = 150.0
+margin_bottom = 20.0
+focus_mode = 0
+text = "Faction"
+script = ExtResource( 2 )
+
+[node name="Terrain" type="Button" parent="."]
+margin_top = 24.0
+margin_right = 150.0
+margin_bottom = 44.0
+focus_mode = 0
+text = "Terrain"
+script = ExtResource( 2 )
+
+[node name="Cell" type="Button" parent="."]
+margin_top = 48.0
+margin_right = 150.0
+margin_bottom = 68.0
+focus_mode = 0
+text = "Cell"
+script = ExtResource( 2 )
+
+[node name="Plate" type="Button" parent="."]
+margin_top = 72.0
+margin_right = 150.0
+margin_bottom = 92.0
+focus_mode = 0
+text = "Plate"
+script = ExtResource( 2 )
+
+[node name="Continent" type="Button" parent="."]
+margin_top = 96.0
+margin_right = 150.0
+margin_bottom = 116.0
+focus_mode = 0
+text = "Continent"
+script = ExtResource( 2 )
+
+[node name="Temperature" type="Button" parent="."]
+margin_top = 120.0
+margin_right = 150.0
+margin_bottom = 140.0
+focus_mode = 0
+text = "Temperature"
+script = ExtResource( 2 )
+
+[node name="Moisture" type="Button" parent="."]
+margin_top = 144.0
+margin_right = 150.0
+margin_bottom = 164.0
+focus_mode = 0
+text = "Moisture"
+script = ExtResource( 2 )
+
+[node name="Influence" type="Button" parent="."]
+margin_top = 168.0
+margin_right = 150.0
+margin_bottom = 188.0
+focus_mode = 0
+text = "Influence"
+script = ExtResource( 2 )
+
+[node name="ShowHideUnits" type="Button" parent="."]
+margin_top = 192.0
+margin_right = 150.0
+margin_bottom = 212.0
+focus_mode = 0
+text = "Hide Units"
+script = ExtResource( 2 )

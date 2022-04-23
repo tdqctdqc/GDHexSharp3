@@ -1,0 +1,36 @@
+MainMenu.CreateNewGame();
+	new LoadingScreenState; 
+	AppStateContorller.SetState(LoadingScreenState);
+		LoadingScrnState.Enter();
+			SessionAppState.Build();
+				new session; 
+				Game.SetSession(session);
+				session.Setup();
+					Data.Setup();
+						...
+					Server.Setup();
+						DataBinding.Setup();
+							ModelInfoManager.Setup();
+							CacheManager.Setup();
+							OrderInterpreter.Setup();
+								SetupOrders();
+							SetupModels();
+								CacheManager.SetupCache(t);
+									Cache<t>.Setup();
+									ModelInfoManager.SetupModelInfo<t>();
+										ModelInfo<t>.Setup();
+						new Router;
+						new state();
+							CreateSchemas();
+						new StateInterface();
+						new logic();
+						new LogicInterface();
+					Server.StartServer();
+						logic.BuildNewGameSession();
+							
+					Editor.Setup();
+					
+			AppStateConotrller.SetState(SessionAppState);
+				SessionAppState.Enter();
+					Session.AwakeClient();
+		

@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Client/Graphics/UnitGraphics/Counter/UnitCounterFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Client/Graphics/UnitGraphics/UnitGraphic.cs" type="Script" id=2]
+[ext_resource path="res://Client/Graphics/UnitGraphics/Counter/background.png" type="Texture" id=3]
+[ext_resource path="res://Client/Graphics/UnitGraphics/NATOIcons/infantry.svg" type="Texture" id=4]
+[ext_resource path="res://Client/Graphics/UnitGraphics/Counter/border.png" type="Texture" id=5]
+[ext_resource path="res://Client/Graphics/UnitGraphics/Counter/counterHighlight.svg" type="Texture" id=6]
+
+[sub_resource type="QuadMesh" id=1]
+size = Vector2( 49, 49 )
+
+[sub_resource type="QuadMesh" id=2]
+size = Vector2( 50, 50 )
+
+[sub_resource type="QuadMesh" id=3]
+size = Vector2( 7, 7 )
+
+[sub_resource type="QuadMesh" id=4]
+size = Vector2( 20, 20 )
+
+[sub_resource type="QuadMesh" id=5]
+size = Vector2( 60, 60 )
+
+[node name="UnitGraphic" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Counter" type="MeshInstance2D" parent="."]
+mesh = SubResource( 1 )
+texture = ExtResource( 3 )
+
+[node name="Border" type="MeshInstance2D" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+mesh = SubResource( 2 )
+texture = ExtResource( 5 )
+
+[node name="Force" type="MeshInstance2D" parent="."]
+modulate = Color( 0.219608, 1, 0, 1 )
+position = Vector2( -13.4, -13.7 )
+mesh = SubResource( 3 )
+
+[node name="Readiness" type="MeshInstance2D" parent="."]
+modulate = Color( 0.219608, 1, 0, 1 )
+position = Vector2( -13.4, 0 )
+mesh = SubResource( 3 )
+
+[node name="Supply" type="MeshInstance2D" parent="."]
+modulate = Color( 0.219608, 1, 0, 1 )
+position = Vector2( -13.4, 13.6 )
+mesh = SubResource( 3 )
+
+[node name="NATOIcon" type="MeshInstance2D" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 3, -1 )
+mesh = SubResource( 4 )
+texture = ExtResource( 4 )
+
+[node name="Stats" type="Label" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = -6.0
+margin_top = 7.77728
+margin_right = 117.0
+margin_bottom = 74.7773
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 1 )
+text = "99-99"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rank" type="Label" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 22.0
+margin_top = -8.0
+margin_right = 118.0
+margin_bottom = 59.0
+rect_rotation = 90.0
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 1 )
+text = "XXX"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ordinal" type="Label" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -5.33936
+margin_top = -21.0237
+margin_right = 101.661
+margin_bottom = 45.9763
+rect_scale = Vector2( 0.15, 0.15 )
+custom_fonts/font = ExtResource( 1 )
+text = "13th"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="MeshInstance2D" parent="."]
+visible = false
+mesh = SubResource( 5 )
+texture = ExtResource( 6 )

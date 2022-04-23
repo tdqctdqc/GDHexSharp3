@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Client/Graphics/MapGraphics/RiverGraphics/RiverGraphic.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/UIHex/UIHexRivers/UIHexRivers.cs" type="Script" id=2]
+
+[node name="UIHexRivers" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SRiver" type="MeshInstance2D" parent="."]
+position = Vector2( 0, -46.346 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="SERiver" type="MeshInstance2D" parent="."]
+position = Vector2( 41, -23 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="NERiver" type="MeshInstance2D" parent="."]
+position = Vector2( 41, 23 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="NRiver" type="MeshInstance2D" parent="."]
+position = Vector2( 0, 46.346 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="NWRiver" type="MeshInstance2D" parent="."]
+position = Vector2( -41, 23 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+
+[node name="SWRiver" type="MeshInstance2D" parent="."]
+position = Vector2( -41, -23 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )

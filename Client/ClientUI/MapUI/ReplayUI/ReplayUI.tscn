@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Client/ClientUI/MapUI/ReplayUI/ReplayUI.cs" type="Script" id=1]
+[ext_resource path="res://UI/UtilityNodes/FuncButton/FuncButton.cs" type="Script" id=2]
+
+[node name="ReplayUI" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -196.0
+margin_top = -25.0
+margin_right = 183.0
+margin_bottom = 25.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -189.0
+margin_top = -20.0
+margin_right = 189.0
+margin_bottom = 20.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Toggle" type="Button" parent="HBox"]
+margin_left = 5.0
+margin_right = 93.0
+margin_bottom = 40.0
+focus_mode = 0
+text = "View Replay"
+script = ExtResource( 2 )
+
+[node name="PreviousRound" type="Button" parent="HBox"]
+margin_left = 97.0
+margin_right = 245.0
+margin_bottom = 40.0
+focus_mode = 0
+text = "Show Previous Round"
+script = ExtResource( 2 )
+
+[node name="NextRound" type="Button" parent="HBox"]
+margin_left = 249.0
+margin_right = 372.0
+margin_bottom = 40.0
+focus_mode = 0
+text = "Show Next Round"
+script = ExtResource( 2 )
+
+[node name="Round" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 3.05176e-05
+margin_top = -25.0
+margin_right = 100.0
+margin_bottom = 25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Round"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -44.5
+margin_top = -21.5
+margin_right = 44.5
+margin_bottom = 21.5
+text = "Round:"
+align = 1
+valign = 1
